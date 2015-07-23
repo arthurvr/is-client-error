@@ -1,6 +1,6 @@
 {
   "name": "is-client-error",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check if a number is a HTTP Client Error code",
   "license": "MIT",
   "repository": "arthurvr/is-client-error",
