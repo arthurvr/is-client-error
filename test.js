@@ -1,12 +1,14 @@
 'use strict';
-var assert = require('assert');
+var test = require('ava');
 var isClientError = require('./');
 
-it('should detect client error codes', function () {
-	assert(isClientError(404));
-	assert(isClientError(400));
-	assert(isClientError(494));
-	assert(!isClientError(308));
-	assert(!isClientError(425));
-	assert(!isClientError(441));
+test('should detect client error codes', function (t) {
+	t.true(isClientError(404));
+	t.true(isClientError(400));
+	t.true(isClientError(494));
+	t.true(!isClientError(308));
+	t.true(!isClientError(425));
+	t.true(!isClientError(441));
+
+	t.end();
 });
