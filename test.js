@@ -1,8 +1,7 @@
-'use strict';
-var test = require('ava');
-var isClientError = require('./');
+import test from 'ava';
+import isClientError from './';
 
-test('detects client error codes', function (t) {
+test('detects client error codes', t => {
 	t.true(isClientError(404));
 	t.true(isClientError(400));
 	t.true(isClientError(494));
@@ -13,8 +12,8 @@ test('detects client error codes', function (t) {
 	t.end();
 });
 
-test('throws when not passing a number', function (t) {
-	t.throws(function () {
+test('throws when not passing a number', t => {
+	t.throws(() => {
 		isClientError({});
 	});
 
