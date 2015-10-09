@@ -13,7 +13,7 @@ $ npm install --save is-client-error
 ## Usage
 
 ```js
-var isClientError = require('is-client-error');
+const isClientError = require('is-client-error');
 
 isClientError(404);
 //=> true
